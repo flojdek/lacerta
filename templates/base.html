@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>{% block title %}My amazing site{% endblock %}</title>
+		<style type="text/css">
+
+		* 
+		{	
+			font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans;
+		}
+
+		body
+		{
+			padding: 0 0 0 0;
+			margin: 0 0 0 0;
+			background-color: #fff7f5;
+		}
+
+		li
+		{
+			margin-top: 15px;
+		}
+
+		#header
+		{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			height: 112px;
+			background-color: #d5cdcd;
+			background-image: url('/lacerta/site_media/pas_gora.jpg');
+			background-position: center;
+		}
+
+		#menu
+		{
+			margin-top: 45px;
+			border: 0px solid green;
+			height: 30px;
+			text-align: center;
+		}
+
+		#menu a
+		{
+			font-family: sans-serif;
+			font-weight: bold;
+			text-decoration: none;
+			margin-right: 20px;
+			color: #0f465f;
+			text-shadow: #FFFFA0 1px 1px 1px; 
+		}
+
+		#menu a:visited
+		{
+			
+		}
+
+		#menu a:hover
+		{
+			text-decoration: none;
+			text-shadow: #075F2b 0px 0px 2px; 
+		}
+
+		#left_menu
+		{
+			padding-left: 0px;
+			padding-right: 0px;
+			float: left;
+			width: 200px;
+			text-align: center;
+			height: 120px;
+		}
+
+		#left_menu a
+		{
+			font-weight: bold;
+			font-family: sans-serif;
+			text-decoration: none;
+			margin-top: 20px;
+			color: #0f478f;
+			text-shadow: #FFFFA0 1px 1px 1px; 
+		}
+
+		#left_menu a:hover
+		{
+			text-decoration: none;
+			text-shadow: #075F2b 0px 0px 2px; 
+		}
+
+		#left_menu table
+		{
+			margin-left: 20%;
+			border-spacing: 10px;	
+		}
+
+		#content
+		{
+			margin: 0 0 0 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 200px;
+			padding-right: 200px;
+			background-color: #fff7f5;
+		}
+
+		#info
+		{
+			background-color: #fff7f5
+			background-image: url('/lacerta/site_media/pas_dol.jpg');
+			margin-top: 100px;
+			height: 25px;
+			text-align: center;
+			font-size: small;
+			color: gray;
+		}
+
+		#info a
+		{
+			color: gray;
+			text-decoration: none;
+		}
+
+		#info a:visited
+		{
+			color: gray;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<center><img src="/lacerta/site_media/logo2.png"></center>
+		</div>
+		<div id="menu">
+			<a href="/onas">O nas</a>
+			<a href="/oferta">Oferta</a>
+			<a href="/doswiadczenie">Doświadczenie</a>
+			<a href="/publikacje">Publikacje</a>
+			<a href="/wspolpraca">Współpraca</a>
+		</div>
+		<div id="left_menu">
+			{% block context_menu %}{% endblock %}
+		</div>
+		<div id="content">
+			{% block content %}{% endblock %}
+		</div>
+		<div id="info">
+			<div style="height: 3px"></div>
+			© 2010 <a href="http://braindamage.pl">braindamage.pl</a>
+		</div>
+	</body>
+</html>
