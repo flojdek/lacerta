@@ -50,14 +50,14 @@
 			text-shadow: #FFFFA0 1px 1px 1px; 
 		}
 
-		#menu a:visited
-		{
-			
-		}
-
 		#menu a:hover
 		{
 			text-decoration: none;
+			text-shadow: #075F2b 0px 0px 2px; 
+		}
+
+		#menu a.active
+		{
 			text-shadow: #075F2b 0px 0px 2px; 
 		}
 
@@ -82,6 +82,12 @@
 		}
 
 		#left_menu a:hover
+		{
+			text-decoration: none;
+			text-shadow: #075F2b 0px 0px 2px; 
+		}
+
+		#left_menu a.active
 		{
 			text-decoration: none;
 			text-shadow: #075F2b 0px 0px 2px; 
@@ -132,11 +138,11 @@
 			<center><a href="http://lacerta.org.pl"><img src="/lacerta/site_media/logo2.png"></center>
 		</div>
 		<div id="menu">
-			<a href="/onas">O nas</a>
-			<a href="/oferta">Oferta</a>
-			<a href="/doswiadczenie">Doświadczenie</a>
-			<a href="/publikacje">Publikacje</a>
-			<a href="/wspolpraca">Współpraca</a>
+			<a href="/onas" {% ifequal page "onas" %}class="active"{% endifequal %}>O nas</a>
+			<a href="/oferta" {% ifequal page "oferta" %}class="active"{% endifequal %}>Oferta</a>
+			<a href="/doswiadczenie" {% ifequal page "doswiadczenie" %}class="active"{% endifequal %}>Doświadczenie</a>
+			<a href="/publikacje" {% ifequal page "publikacje" %}class="active"{% endifequal %}>Publikacje</a>
+			<a href="/wspolpraca" {% ifequal page "wspolpraca" %}class="active"{% endifequal %}>Współpraca</a>
 		</div>
 		<div id="left_menu">
 			{% block context_menu %}{% endblock %}

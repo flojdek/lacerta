@@ -1,4 +1,4 @@
 from django.shortcuts import render_to_response
 
 def index(request):
-	return render_to_response('publikacje.html')
+	return render_to_response('publikacje.html', {"page" : "publikacje"})

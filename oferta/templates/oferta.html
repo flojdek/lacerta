@@ -4,9 +4,9 @@
 
 {% block context_menu %}
 <table>
-	<tr><td><a href="/oferta/ekspertyzy">Ekspertyzy</a></td></tr>
-	<tr><td><a href="/oferta/edukacja">Edukacja</a></td></tr>
-	<tr><td><a href="/oferta/wnioski">Wnioski UE</a></td></tr>
+	<tr><td><a href="/oferta/ekspertyzy" {% ifequal subpage "ekspertyzy" %}class="active"{% endifequal %}>Ekspertyzy</a></td></tr>
+	<tr><td><a href="/oferta/edukacja" {% ifequal subpage "edukacja" %}class="active"{% endifequal %}>Edukacja</a></td></tr>
+	<tr><td><a href="/oferta/wnioski" {% ifequal subpage "wnioski" %}class="active"{% endifequal %}>Wnioski UE</a></td></tr>
 </table>
 {% endblock %}
 
