@@ -2,7 +2,13 @@
      "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
-		<title>{% block title %}My amazing site{% endblock %}</title>
+		<title>{% block title %}{% endblock %}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="pl-PL">
+		<meta name="description" content="Ekspertyzy przyrodnicze, opiniowanie, inwentaryzacje herpetologiczne i ichtiologiczne, opracowania, oceny, edukacja ekologiczna, pozyskiwanie funduszy UE, zarządzanie projektami.">
+		<meta name="keywords" content="ekspertyzy ekologia biologia środowisko ichtiologia lacerta ochrona fundusze UE herpetologia inwentaryzacja przyroda edukacja ekologiczna">
+
 		<style type="text/css">
 
 		* 
@@ -24,12 +30,33 @@
 
 		#header
 		{
+			border: 0px solid green;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			height: 112px;
 			background-color: #d5cdcd;
 			background-image: url('/lacerta/site_media/pas_gora.jpg');
 			background-position: center;
+			text-align: center;
+		}
+
+		#header table
+		{
+			width: 100%;
+		}
+
+		#header td.one
+		{
+			width: 185px;
+		}
+
+		#header td.two
+		{
+		}
+
+		#header td.three
+		{
+			width: 185px;
 		}
 
 		#menu
@@ -160,7 +187,18 @@
 	</head>
 	<body>
 		<div id="header">
-			<center><a href="http://www.lacerta.org.pl"><img src="/lacerta/site_media/logo2.png"></center>
+			<table border="0">
+			<tr>
+				<td class="one">
+				</td>
+				<td class="two">
+					<!-- TODO <img class="two" src="/lacerta/site_media/obrazek_onas.png"> -->
+					<img src="/lacerta/site_media/logo2.png">
+				</td>
+				<td class="three">
+				</td>
+			</tr>
+			</table>
 		</div>
 		<div id="menu">
 			<a href="/onas" {% ifequal page "onas" %}class="active"{% endifequal %}>O nas</a>
