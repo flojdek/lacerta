@@ -5,7 +5,6 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-	(r'^robots.txt', 'django.views.static.serve', {'path': /lacerta/site_media/robots.txt, 'document_root': settings.MEDIA_ROOT, 'show_indexes': False}), 
 	(r'^$', 'lacerta.onas.views.index'),
 	(r'^onas/$', 'lacerta.onas.views.index'),
 	(r'^oferta/(?P<type>\w*)$', 'lacerta.oferta.views.index'),
